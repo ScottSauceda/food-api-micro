@@ -1,9 +1,22 @@
+server:
+  ports:
+    - "8082:8082
+
 spring:
   application:
     name: restaurant-microservice
-server:
-  port: 8082
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://db:3306/foodie
+    username: mss
+    password: password
+    driverClassName: com.mysql.cj.jdbc.Driver
 
   eureka:
     instance:
-      hostname: localhost
+      hostname: eureka

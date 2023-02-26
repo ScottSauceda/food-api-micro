@@ -10,8 +10,8 @@
         <module name="review-microservice" />
         <module name="eureka-server" />
         <module name="gateway" />
-        <module name="user-microservice" />
         <module name="restaurant-microservice" />
+        <module name="user-microservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

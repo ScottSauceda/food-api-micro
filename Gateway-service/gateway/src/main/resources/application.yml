@@ -1,5 +1,6 @@
 server:
-  port: 8080
+  ports:
+    - "8080:8080"
 
 spring:
   application:
@@ -8,7 +9,7 @@ spring:
     gateway:
       routes:
         - id: users
-          uri: http://localhost:8081/
+          uri: user-microservice:8081
           predicates:
             - Path=/user/**
         - id: restaurants
@@ -19,3 +20,25 @@ spring:
           uri: http://localhost:8083
           predicates:
             - Path=/review/**
+
+info:
+  app:
+    name: ${spring.application.name}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: {EUREKA_SERVER: http://docker.for.mac.host.internal:8761/eureka}
+    healthcheck:
+      enabled: true
+    registered-with-eureka: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - mappings
+          - env
+          - health
+          - info
