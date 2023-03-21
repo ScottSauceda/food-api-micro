@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="review-microservice" />
+        <module name="review-microservice (2)" />
+        <module name="review-microservice (1)" />
         <module name="eureka-server" />
+        <module name="restaurant-microservice" />
         <module name="gateway" />
         <module name="user-microservice" />
-        <module name="restaurant-microservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +21,8 @@
       <module name="gateway" target="17" />
       <module name="restaurant-microservice" target="17" />
       <module name="review-microservice" target="17" />
+      <module name="review-microservice (1)" target="17" />
+      <module name="review-microservice (2)" target="17" />
       <module name="user-microservice" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -28,6 +32,8 @@
       <module name="gateway" options="-parameters" />
       <module name="restaurant-microservice" options="-parameters" />
       <module name="review-microservice" options="-parameters" />
+      <module name="review-microservice (1)" options="-parameters" />
+      <module name="review-microservice (2)" options="-parameters" />
       <module name="user-microservice" options="-parameters" />
     </option>
   </component>
